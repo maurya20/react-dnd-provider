@@ -4,7 +4,10 @@
   "version": "0.1.0",
   "description": "A lightweight drag and drop provider library for react having TypeScript support",
   "author": "Mukesh Maurya",
-  "repository": "https://github.com/maurya20/react-dnd-provider",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maurya20/react-dnd-provider.git"
+  },
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
