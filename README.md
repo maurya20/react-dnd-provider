@@ -157,7 +157,7 @@ onDragEnd	function	Called when a drag action ends
 
 
 # 📌 onDragEnd Result Object
-
+```
 {
   source: {
     droppableId: string,
@@ -168,6 +168,7 @@ onDragEnd	function	Called when a drag action ends
     index: number
   } | null
 }
+```
 destination will be null if the item is dropped outside a droppable area.
 
 # 🎨 Styling Notes
