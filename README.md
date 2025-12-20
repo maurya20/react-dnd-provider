@@ -18,16 +18,15 @@ Easily build sortable lists, Kanban boards, and multi-column drag-and-drop layou
 
 ## 📦 Installation
 
-```bash
 npm install react-dnd-provider
 or
-
-bash
-Copy code
 yarn add react-dnd-provider
-🚀 Usage Example
+
+
+
+## 🚀 Usage Example
 jsx
-Copy code
+```
 import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-dnd-provider';
 
@@ -145,46 +144,20 @@ const App = () => {
 };
 
 export default App;
-🧩 API Reference
-<DragDropContext />
-Wraps your drag-and-drop UI.
 
-Props
-Prop	Type	Description
+```
+# 🧩 API Reference
+<DragDropContext /> Wraps your drag-and-drop UI.
+
 onDragEnd	function	Called when a drag action ends
 
-<Droppable />
-Defines a droppable area.
+<Droppable /> Defines a droppable area.
 
-Props
-Prop	Type	Description
-droppableId	string	Unique identifier
+<Draggable /> Defines a draggable item.
 
-Render Props
-provided.innerRef
 
-provided.droppableProps
+# 📌 onDragEnd Result Object
 
-provided.placeholder
-
-<Draggable />
-Defines a draggable item.
-
-Props
-Prop	Type	Description
-draggableId	string	Unique identifier
-index	number	Item position
-
-Render Props
-provided.innerRef
-
-provided.draggableProps
-
-provided.dragHandleProps
-
-📌 onDragEnd Result Object
-ts
-Copy code
 {
   source: {
     droppableId: string,
@@ -197,14 +170,14 @@ Copy code
 }
 destination will be null if the item is dropped outside a droppable area.
 
-🎨 Styling Notes
+# 🎨 Styling Notes
 This library ships with no default styles
 
 You control all layout and appearance
 
 Always merge provided.draggableProps.style for smooth animations
 
-⚙️ Requirements
+# ⚙️ Requirements
 React 16.8 or higher
 
 Hooks enabled
