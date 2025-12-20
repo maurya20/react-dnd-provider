@@ -4,6 +4,18 @@
   "version": "0.1.0",
   "description": "A lightweight drag and drop provider library for react having TypeScript support",
   "author": "Mukesh Maurya",
+  "keywords": [
+    "react-dnd-provider",
+    "drag and drop",
+    "dnd library",
+    "kanbon drag and drop",
+    "sortable",
+    "reorder",
+    "reorderable",
+    "react drag and drop",
+    "react dnd provider",
+    "beautiful-dnd alternative"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/maurya20/react-dnd-provider.git"
