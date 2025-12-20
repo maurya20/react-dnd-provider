@@ -146,7 +146,7 @@ const App = () => {
 export default App;
 
 ```
-# 🧩 API Reference
+### 🧩 API Reference
 <DragDropContext /> Wraps your drag-and-drop UI.
 
 onDragEnd	function	Called when a drag action ends
@@ -156,7 +156,7 @@ onDragEnd	function	Called when a drag action ends
 <Draggable /> Defines a draggable item.
 
 
-# 📌 onDragEnd Result Object
+### 📌 onDragEnd Result Object
 ```
 {
   source: {
@@ -171,14 +171,14 @@ onDragEnd	function	Called when a drag action ends
 ```
 destination will be null if the item is dropped outside a droppable area.
 
-# 🎨 Styling Notes
+### 🎨 Styling Notes
 This library ships with no default styles
 
 You control all layout and appearance
 
 Always merge provided.draggableProps.style for smooth animations
 
-# ⚙️ Requirements
+### ⚙️ Requirements
 React 16.8 or higher
 
 Hooks enabled
