@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-dnd-provider/demo/static/css/main.e6c13ad2.css",
-    "main.js": "/react-dnd-provider/demo/static/js/main.c999f230.js",
-    "static/js/453.1c674800.chunk.js": "/react-dnd-provider/demo/static/js/453.1c674800.chunk.js",
-    "index.html": "/react-dnd-provider/demo/index.html",
-    "main.e6c13ad2.css.map": "/react-dnd-provider/demo/static/css/main.e6c13ad2.css.map",
-    "main.c999f230.js.map": "/react-dnd-provider/demo/static/js/main.c999f230.js.map",
-    "453.1c674800.chunk.js.map": "/react-dnd-provider/demo/static/js/453.1c674800.chunk.js.map"
+    "main.css": "/maurya20.github.io/static/css/main.e6c13ad2.css",
+    "main.js": "/maurya20.github.io/static/js/main.f76f575e.js",
+    "static/js/453.1c674800.chunk.js": "/maurya20.github.io/static/js/453.1c674800.chunk.js",
+    "index.html": "/maurya20.github.io/index.html",
+    "main.e6c13ad2.css.map": "/maurya20.github.io/static/css/main.e6c13ad2.css.map",
+    "main.f76f575e.js.map": "/maurya20.github.io/static/js/main.f76f575e.js.map",
+    "453.1c674800.chunk.js.map": "/maurya20.github.io/static/js/453.1c674800.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.c999f230.js"
+    "static/js/main.f76f575e.js"
   ]
 }
