@@ -1,30 +1,49 @@
-import typescript from '@rollup/plugin-typescript';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import typescript from "rollup-plugin-typescript2";
+import postcss from "rollup-plugin-postcss";
+import terser from "@rollup/plugin-terser";
 
 export default {
-  input: 'src/index.ts',
+  input: "src/index.ts",
   output: [
     {
-      file: 'dist/index.js',
-      format: 'es',
-      sourcemap: true,
+      file: "dist/index.cjs.js",
+      format: "cjs",
+      exports: "named",
+      sourcemap: true
     },
     {
-      file: 'dist/index.cjs',
-      format: 'cjs',
-      sourcemap: true,
-    },
+      file: "dist/index.esm.js",
+      format: "esm",
+      sourcemap: true
+    }
   ],
-  external: ['react', 'react-dom', 'react/jsx-runtime'],
+  external: ["react", "react-dom", "react/jsx-runtime"],
   plugins: [
-    typescript({
-      tsconfig: path.join(__dirname, 'tsconfig.build.json'),
-      declaration: true,
-      declarationDir: 'dist',
+    resolve({
+      browser: true,
+      preferBuiltins: false
     }),
-  ],
+    commonjs(),
+    postcss({
+      extract: false,
+      minimize: true
+    }),
+    typescript({
+      useTsconfigDeclarationDir: true,
+      tsconfigOverride: {
+        compilerOptions: {
+          declaration: true,
+          declarationDir: "dist",
+          declarationMap: true
+        }
+      }
+    }),
+    terser({
+      format: {
+        comments: false
+      }
+    })
+  ]
 };
-

@@ -50,9 +50,9 @@ const DragDropContextProvider: React.FC<DragDropContextProviderProps> = ({
   onDragUpdate: onDragUpdateProp,
   onBeforeDragStart,
 }) => {
-  const [draggableId, setDraggableId] = React?.useState<string | null>(null);
-  const [source, setSource] = React?.useState<DraggableLocation | null>(null);
-  const [destination, setDestination] = React?.useState<DraggableLocation | null>(null);
+  const [draggableId, setDraggableId] = useState<string | null>(null);
+  const [source, setSource] = useState<DraggableLocation | null>(null);
+  const [destination, setDestination] = useState<DraggableLocation | null>(null);
 
   const onDragStart = (start: DragStart) => {
     if (onBeforeDragStart) {
@@ -99,5 +99,6 @@ const DragDropContextProvider: React.FC<DragDropContextProviderProps> = ({
     </DragDropContext.Provider>
   );
 };
-
+// Export as both named and default
+export { DragDropContextProvider };
 export default DragDropContextProvider;

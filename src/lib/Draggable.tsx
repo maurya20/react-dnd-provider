@@ -1,5 +1,5 @@
-import React, { useContext, ReactNode, RefObject } from 'react';
-import { DragDropContext } from './DragDropContext';
+import React, { useContext, ReactNode, RefObject, useRef } from 'react';
+import { DragDropContext } from './DragDropContextProvider';
 import { DroppableContext } from './Droppable';
 
 interface DraggableProvided {
@@ -17,6 +17,7 @@ interface DraggableProps {
 const Draggable: React.FC<DraggableProps> = ({ draggableId, index, children }) => {
   const dndContext = useContext(DragDropContext);
   const droppableContext = useContext(DroppableContext);
+  const draggableRef = useRef<HTMLDivElement>(null);
 
   if (!dndContext || !droppableContext) {
     throw new Error('Draggable must be used within a DragDropContextProvider and a Droppable');
@@ -44,6 +45,9 @@ const Draggable: React.FC<DraggableProps> = ({ draggableId, index, children }) =
         if (ref) {
           ref.setAttribute('data-draggable-id', draggableId);
         }
+        if (draggableRef.current !== ref) {
+          (draggableRef as React.MutableRefObject<HTMLDivElement | null>).current = ref;
+        }
       }}
       draggable
       onDragStart={onDragStartHandler}
@@ -52,11 +56,10 @@ const Draggable: React.FC<DraggableProps> = ({ draggableId, index, children }) =
       {children({
         draggableProps: {
           'data-draggable-id': draggableId,
-          style: {},
+          style: {} as React.CSSProperties,
         },
         dragHandleProps: null,
-        //@ts-ignore
-        innerRef: React.createRef<HTMLDivElement>(),
+        innerRef: draggableRef,
       })}
     </div>
   );

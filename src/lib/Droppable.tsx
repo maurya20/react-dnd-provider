@@ -1,5 +1,5 @@
 import React, { useContext, createContext, useRef, ReactNode, RefObject } from 'react';
-import { DragDropContext } from './DragDropContext';
+import { DragDropContext } from './DragDropContextProvider';
 
 interface DroppableContextValue {
   droppableId: string;
@@ -33,10 +33,9 @@ const Droppable: React.FC<DroppableProps> = ({ droppableId, children }) => {
       return;
     }
 
-    const draggables = [
-      //@ts-ignore
-      ...droppableRef.current.querySelectorAll('[data-draggable-id]'),
-    ] as HTMLElement[];
+    const draggables = Array.from(
+      droppableRef.current.querySelectorAll('[data-draggable-id]')
+    ) as HTMLElement[];
     const mouseY = e.clientY;
     let newIndex = draggables.length;
 
@@ -60,7 +59,6 @@ const Droppable: React.FC<DroppableProps> = ({ droppableId, children }) => {
           droppableProps: {
             'data-droppable-id': droppableId,
           },
-          //@ts-ignore
           innerRef: droppableRef,
           placeholder: null,
         })}
