@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-dnd-provider/demo/static/css/main.e6c13ad2.css",
+    "main.js": "/react-dnd-provider/demo/static/js/main.87c9c238.js",
+    "static/js/453.1c674800.chunk.js": "/react-dnd-provider/demo/static/js/453.1c674800.chunk.js",
+    "index.html": "/react-dnd-provider/demo/index.html",
+    "main.e6c13ad2.css.map": "/react-dnd-provider/demo/static/css/main.e6c13ad2.css.map",
+    "main.87c9c238.js.map": "/react-dnd-provider/demo/static/js/main.87c9c238.js.map",
+    "453.1c674800.chunk.js.map": "/react-dnd-provider/demo/static/js/453.1c674800.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.87c9c238.js"
+  ]
+}
