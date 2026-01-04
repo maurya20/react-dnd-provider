@@ -4,7 +4,6 @@
   "version": "0.1.20",
   "description": "A lightweight drag and drop provider library for react having TypeScript support",
   "author": "Mukesh Maurya",
-  "homepage": "https://maurya20.github.io/react-dnd-provider/",
   "keywords": [
     "react-dnd-provider",
     "drag and drop",
