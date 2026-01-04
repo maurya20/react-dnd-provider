@@ -3,7 +3,7 @@
 A powerful and flexible drag-and-drop library for React applications that provides a simple API for implementing drag-and-drop functionality with TypeScript support. 
 Easily build sortable lists, Kanban boards, and multi-column drag-and-drop layouts.
 
-## [Demo](https://maurya20.github.io/react-dnd-provider/)
+## [Click here to see working demo](https://maurya20.github.io/react-dnd-provider/)
 
 ## Installation
 
